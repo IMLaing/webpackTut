@@ -60,18 +60,31 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports) {
 
+// standard JS module construction
+
+module.exports = {
+	hi: 'Jello',
+	event: 'Uppsala JS'
+};
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var messages = __webpack_require__(0);
+
 var app = document.getElementById('app'); // Test connection to JS
-app.innerHTML = '<p> hi there </p>'; // Test connection to JS
+app.innerHTML = '<p>' + messages.hi + ' ' + messages.event + '</p>'; // Test connection to JS
 
 /***/ })
 /******/ ]);
